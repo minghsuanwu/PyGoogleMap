@@ -6,13 +6,13 @@ Created on 2017年11月13日
 import googlemaps
 import json
 
-def test_simple_directions(self, origins, destinations, key):
+def test_simple_directions(origins, destinations, key):
     # Simplest directions request. Driving directions by default.
     client = googlemaps.Client(key)
     routes = client.directions(origins, destinations)
     printRoutes(routes)
 
-def test_complex_request(self, origins, destinations, key):
+def test_complex_request(origins, destinations, key):
     client = googlemaps.Client(key)
     routes = client.directions(origins, destinations,
                                    mode='driving',    #  "driving", "walking", "bicycling", "transit"
@@ -21,7 +21,7 @@ def test_complex_request(self, origins, destinations, key):
                                    region='tw')
     printRoutes(routes)
 
-def google_map_api(self, origins, destinations, key):
+def google_map_api(origins, destinations, key):
     client = googlemaps.Client(key)
 #     routes = client.directions(origins, destinations)
 
@@ -74,9 +74,9 @@ def main():
     
     origins = '捷運關渡站'
     destinations = '捷運市政府站'
-    google_map_api("test", origins, destinations, key)
-#     test_simple_directions('test', origins, destinations, key)
-#     test_complex_request("test", origins, destinations, key)
+    google_map_api(origins, destinations, key)
+#     test_simple_directions(origins, destinations, key)
+#     test_complex_request(origins, destinations, key)
 
 if __name__ == '__main__':
     main()
