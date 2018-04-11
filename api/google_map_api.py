@@ -33,9 +33,9 @@ def google_map_api(origins, destinations, key):
                                region='tw')
     printRoutes(routes)
 
-def printRoutes(json_string):
-    temp = json.dumps(json_string)
-    parsed_json = json.loads(temp)
+def printRoutes(routes):
+    json_string = json.dumps(routes)
+    parsed_json = json.loads(json_string)
     
     legs = parsed_json[0]['legs'][0]
     distance = legs['distance']['text']
