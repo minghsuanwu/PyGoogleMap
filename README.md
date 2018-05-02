@@ -1,4 +1,4 @@
-# PyGoogleMap
+# py_google_map
 Python sample code for Google Map API<br>
 Reference from https://github.com/googlemaps/google-maps-services-python<br>
 <br>
